@@ -33,7 +33,6 @@ const processDataAndDisplay = async () => {
     while (totalPages < 40) {
         const totalPg = totalPages
         fetchData(`${serviceUrl}?page=${totalPg}&size=${pageSize}&draw=${draw}&start=${start}`)
-        s
         .then((data) => {
             if (!data.data.results.content) {
                 return console.log("chavarda", totalPg)
